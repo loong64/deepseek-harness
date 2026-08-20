@@ -134,7 +134,7 @@
     "release:pack": "tsx scripts/release/pack.ts",
     "release:verify-packed-install": "tsx scripts/release/verify-packed-install.ts",
     "release:publish": "tsx scripts/release/publish.ts",
-    "dsh": "node --import tsx/esm apps/cli/src/bin.ts",
+    "dsh": "node --expose-internals --import tsx/esm apps/cli/src/bin.ts",
     "demo:code-mode": "node scripts/demo-code-mode.mjs",
     "demo:cordis": "node scripts/demo-cordis.mjs",
     "demo:acp": "node --import tsx packages/examples/acp-demo/src/bin.ts --config examples/acp-agent/cordis.yml",
@@ -144,7 +144,9 @@
   },
   "devDependencies": {
     "@agentclientprotocol/sdk": "0.25.1",
+    "@deepseek-ai/dsh-client-ui-directory-picker-browse": "workspace:^",
     "@deepseek-ai/dsh-tool-session-query": "workspace:^",
+    "@loong64/lefthook-linux-loong64": "2.1.9",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.2",
