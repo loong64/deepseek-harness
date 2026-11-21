@@ -1,0 +1,9 @@
+{
+  "name": "@deepseek-ai/node-addon-system-linux-loong64",
+  "version": "0.1.2",
+  "private": true,
+  "description": "LoongArch64 system binaries for workspace builds",
+  "os": ["linux"],
+  "cpu": ["loong64"],
+  "license": "BSD-3-Clause"
+}

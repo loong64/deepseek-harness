@@ -226,6 +226,10 @@
     "verify-provider-data": "tsx packages/llm/llm-pi-ai/scripts/gen-provider-data.ts --check",
     "verify-product-use": "tsx scripts/verify-product-use.ts"
   },
+  "optionalDependencies": {
+    "lightningcss-linux-loong64-gnu": "https://registry.loongnix.cn:5873/lightningcss-linux-loong64-gnu/-/lightningcss-linux-loong64-gnu-1.33.0.tgz",
+    "node-addon-require-builtin-linux-loong64-gnu": "https://registry.loongnix.cn:5873/node-addon-require-builtin-linux-loong64-gnu/-/node-addon-require-builtin-linux-loong64-gnu-0.1.9.tgz"
+  },
   "devDependencies": {
     "@deepseek-ai/dsh-hooks-claude-code": "workspace:*",
     "@deepseek-ai/dsh-hooks-codex": "workspace:*",

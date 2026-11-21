@@ -9,6 +9,8 @@ overrides:
   '@deepseek-ai/cosmokit': link:vendor/cosmokit
   '@deepseek-ai/schemastery': link:vendor/schemastery
 
+packageExtensionsChecksum: sha256-jf3G2B627whYVt4QRCWc6Sp/kpukkBRoMOsDG3G7IGg=
+
 patchedDependencies:
   '@botiverse/oar@0.67.0': 65de2ca1966421e30893d8d4fed6a3d88e4247e131e7575fe791246e594538d6
   '@earendil-works/pi-ai@1.3.0': 4e1c90fd00aea42989664504668633033c1962e53c07860901edb4f72d843765
@@ -22,6 +24,7 @@ patchedDependencies:
   mdast-util-gfm-autolink-literal@2.0.1: 7fa6fc7927128a45c3f148d31faf388806895e2de39c14a144200edbc1e7aaa0
   micromark-extension-gfm-autolink-literal@2.1.0: 906ae7c0cd1f69e7ee308a41bc0542e0085276ac7517e56e96f0ccaf5a89327d
   node-pty@1.2.0-beta.15: 9d30053266d0f39d3debe894c675867f6782da6bcadbc94a693b3cfb9eff8ed0
+  sharp@0.35.5: 28a268231fac0582154fa0d212337a3af49d61aa3bb1d28ee6d774371522c9f3
 
 importers:
 
@@ -300,6 +303,13 @@ importers:
       zod:
         specifier: 4.6.6
         version: 4.6.6
+    optionalDependencies:
+      lightningcss-linux-loong64-gnu:
+        specifier: https://registry.loongnix.cn:5873/lightningcss-linux-loong64-gnu/-/lightningcss-linux-loong64-gnu-1.33.0.tgz
+        version: https://registry.loongnix.cn:5873/lightningcss-linux-loong64-gnu/-/lightningcss-linux-loong64-gnu-1.33.0.tgz
+      node-addon-require-builtin-linux-loong64-gnu:
+        specifier: https://registry.loongnix.cn:5873/node-addon-require-builtin-linux-loong64-gnu/-/node-addon-require-builtin-linux-loong64-gnu-0.1.9.tgz
+        version: https://registry.loongnix.cn:5873/node-addon-require-builtin-linux-loong64-gnu/-/node-addon-require-builtin-linux-loong64-gnu-0.1.9.tgz
 
   apps/cli:
     dependencies:
@@ -883,7 +893,7 @@ importers:
         version: 18.3.1(react@18.3.1)
       sharp:
         specifier: 0.35.5
-        version: 0.35.5(@types/node@22.20.1)
+        version: 0.35.5(patch_hash=28a268231fac0582154fa0d212337a3af49d61aa3bb1d28ee6d774371522c9f3)(@types/node@22.20.1)
       tencentcloud-sdk-nodejs-teo:
         specifier: 4.1.330
         version: 4.1.330(supports-color@9.4.0)
@@ -1171,7 +1181,7 @@ importers:
         version: 18.3.1(react@18.3.1)
       sharp:
         specifier: 0.35.5
-        version: 0.35.5(@types/node@22.20.1)
+        version: 0.35.5(patch_hash=28a268231fac0582154fa0d212337a3af49d61aa3bb1d28ee6d774371522c9f3)(@types/node@22.20.1)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -1340,6 +1350,10 @@ importers:
   native/system/packages/darwin-x64: {}
 
   native/system/packages/entry:
+    devDependencies:
+      '@deepseek-ai/node-addon-system-linux-loong64':
+        specifier: workspace:~
+        version: link:../linux-loong64
     optionalDependencies:
       '@deepseek-ai/node-addon-system-darwin-arm64':
         specifier: workspace:~
@@ -1355,6 +1369,8 @@ importers:
         version: link:../linux-x64
 
   native/system/packages/linux-arm64: {}
+
+  native/system/packages/linux-loong64: {}
 
   native/system/packages/linux-x64: {}
 
@@ -2162,7 +2178,7 @@ importers:
         version: link:../../../vendor/schemastery
       sharp:
         specifier: 0.35.5
-        version: 0.35.5(@types/node@22.20.1)
+        version: 0.35.5(patch_hash=28a268231fac0582154fa0d212337a3af49d61aa3bb1d28ee6d774371522c9f3)(@types/node@22.20.1)
     devDependencies:
       '@deepseek-ai/cordis':
         specifier: workspace:~
@@ -10703,7 +10719,7 @@ importers:
         version: 18.3.1(react@18.3.1)
       sharp:
         specifier: ^0.35.3
-        version: 0.35.5(@types/node@22.20.1)
+        version: 0.35.5(patch_hash=28a268231fac0582154fa0d212337a3af49d61aa3bb1d28ee6d774371522c9f3)(@types/node@22.20.1)
 
   packages/experimental/cua-bundle:
     dependencies:
@@ -10856,7 +10872,7 @@ importers:
         version: 8.20.0
       sharp:
         specifier: ^0.35.3
-        version: 0.35.5(@types/node@22.20.1)
+        version: 0.35.5(patch_hash=28a268231fac0582154fa0d212337a3af49d61aa3bb1d28ee6d774371522c9f3)(@types/node@22.20.1)
 
   packages/experimental/cua-mcp:
     dependencies:
@@ -17849,7 +17865,7 @@ importers:
         version: link:../../core/tools
       sharp:
         specifier: 0.35.5
-        version: 0.35.5(@types/node@22.20.1)
+        version: 0.35.5(patch_hash=28a268231fac0582154fa0d212337a3af49d61aa3bb1d28ee6d774371522c9f3)(@types/node@22.20.1)
 
   packages/ssh/fs-ssh:
     dependencies:
@@ -22085,163 +22101,176 @@ packages:
     resolution: {integrity: sha512-LPKOXPn/zV+zis1oOfGWogaXVpqUybF3ZS6SCZIsz8vg0ivVp9+fVqyYB7xq0aiST/VhUQYGO1qo6uoYSiEJqw==}
 
   '@img/colour@1.1.0':
-    resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
+    resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==, tarball: https://registry.loongnix.cn:5873/@img%2fcolour/-/colour-1.1.0.tgz}
     engines: {node: '>=18'}
 
   '@img/sharp-darwin-arm64@0.35.5':
-    resolution: {integrity: sha512-QRUlFQ0WxvdWyqqG/WtI3iupfD5rBzmCHXSdPsY91sAtVtTo7Q4cb6zOccZ3gqEqkr0f1As1ehLqmEpDsRf+lg==}
+    resolution: {integrity: sha512-QRUlFQ0WxvdWyqqG/WtI3iupfD5rBzmCHXSdPsY91sAtVtTo7Q4cb6zOccZ3gqEqkr0f1As1ehLqmEpDsRf+lg==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-darwin-arm64/-/sharp-darwin-arm64-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [darwin]
 
   '@img/sharp-darwin-x64@0.35.5':
-    resolution: {integrity: sha512-+BR255RhDlpygUpOc/Jdt1nT6DQ3XG/ERo5wbcdOf5Q320dKtPCKPLR1LJs9VGXRaMa8l1uUa0tkCNOXiAxZUw==}
+    resolution: {integrity: sha512-+BR255RhDlpygUpOc/Jdt1nT6DQ3XG/ERo5wbcdOf5Q320dKtPCKPLR1LJs9VGXRaMa8l1uUa0tkCNOXiAxZUw==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-darwin-x64/-/sharp-darwin-x64-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [darwin]
 
   '@img/sharp-freebsd-wasm32@0.35.5':
-    resolution: {integrity: sha512-Y/z91nEZ4uIBX5X3nfTovjU9lHNKFYbL2lpHCLVNmXQK03VIZvXBBt0KxbPGp2SdGSF+2mQU4e+hQaWOt86iAw==}
+    resolution: {integrity: sha512-Y/z91nEZ4uIBX5X3nfTovjU9lHNKFYbL2lpHCLVNmXQK03VIZvXBBt0KxbPGp2SdGSF+2mQU4e+hQaWOt86iAw==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-freebsd-wasm32/-/sharp-freebsd-wasm32-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     os: [freebsd]
 
   '@img/sharp-libvips-darwin-arm64@1.3.4':
-    resolution: {integrity: sha512-5R89nBYiRdUlSWJxPhO+GVtaXzXSxKnRu/xqMn3KTA3L9EB9Oy/P+Nn2f2vlhPuUdy/Zusb2DarbyTpGCfEDuw==}
+    resolution: {integrity: sha512-5R89nBYiRdUlSWJxPhO+GVtaXzXSxKnRu/xqMn3KTA3L9EB9Oy/P+Nn2f2vlhPuUdy/Zusb2DarbyTpGCfEDuw==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-darwin-arm64/-/sharp-libvips-darwin-arm64-1.3.4.tgz}
     cpu: [arm64]
     os: [darwin]
 
   '@img/sharp-libvips-darwin-x64@1.3.4':
-    resolution: {integrity: sha512-iR2OKH80yi0U+dUplyh3/xdpFvps6YkCwsXenIJxqxR1v9o+xtKTGbS9H7cps+2Vxjc8B1j96p75NmTGjIhtpQ==}
+    resolution: {integrity: sha512-iR2OKH80yi0U+dUplyh3/xdpFvps6YkCwsXenIJxqxR1v9o+xtKTGbS9H7cps+2Vxjc8B1j96p75NmTGjIhtpQ==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-darwin-x64/-/sharp-libvips-darwin-x64-1.3.4.tgz}
     cpu: [x64]
     os: [darwin]
 
   '@img/sharp-libvips-linux-arm64@1.3.4':
-    resolution: {integrity: sha512-Y3dgX/6lE2QhQb+Gxy0WZxfg9MEm/JBjamZpS2IklP7xIQoKN4hzAm7KcMVGtaVDt3neE9OKBC7vAfonA/Lr1A==}
+    resolution: {integrity: sha512-Y3dgX/6lE2QhQb+Gxy0WZxfg9MEm/JBjamZpS2IklP7xIQoKN4hzAm7KcMVGtaVDt3neE9OKBC7vAfonA/Lr1A==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-linux-arm64/-/sharp-libvips-linux-arm64-1.3.4.tgz}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
   '@img/sharp-libvips-linux-arm@1.3.4':
-    resolution: {integrity: sha512-LmRtTsOHuvM2+wlO2Db37dx5MiZhB0FvSunciw48YjdOkZz9KAiRbm8ujeMOA1INqmei5NapFxYEK1D1ZSidmw==}
+    resolution: {integrity: sha512-LmRtTsOHuvM2+wlO2Db37dx5MiZhB0FvSunciw48YjdOkZz9KAiRbm8ujeMOA1INqmei5NapFxYEK1D1ZSidmw==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-linux-arm/-/sharp-libvips-linux-arm-1.3.4.tgz}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
 
+  '@img/sharp-libvips-linux-loong64@1.3.4':
+    resolution: {integrity: sha512-elb85x1i/UVFLHAeHplkrjkz4rhPovDs8hxPTp+Yt88780flK9OdYv1dL/n5v5ybW3tfVZ+pAH5T3ne3Zj9w9g==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-linux-loong64/-/sharp-libvips-linux-loong64-1.3.4.tgz}
+    cpu: [loong64]
+    os: [linux]
+    libc: [glibc]
+
   '@img/sharp-libvips-linux-ppc64@1.3.4':
-    resolution: {integrity: sha512-Le6boB8Tai0Nis+gIxIpKx68UDVVIqdR8Tin5Yf1z2LJJQLDJvCDRqRu+jC2qCoD+eIomonmOwB4smBRxfVpYQ==}
+    resolution: {integrity: sha512-Le6boB8Tai0Nis+gIxIpKx68UDVVIqdR8Tin5Yf1z2LJJQLDJvCDRqRu+jC2qCoD+eIomonmOwB4smBRxfVpYQ==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-linux-ppc64/-/sharp-libvips-linux-ppc64-1.3.4.tgz}
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
 
   '@img/sharp-libvips-linux-riscv64@1.3.4':
-    resolution: {integrity: sha512-aHkkIEHPRdQEegJN20MLmGtxYD9R2wQr3Cwpddnu5+YKMt6Uzax7S9h5gpZTo8wyrGuZSlfQ63OevL5mTyOC7Q==}
+    resolution: {integrity: sha512-aHkkIEHPRdQEegJN20MLmGtxYD9R2wQr3Cwpddnu5+YKMt6Uzax7S9h5gpZTo8wyrGuZSlfQ63OevL5mTyOC7Q==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-linux-riscv64/-/sharp-libvips-linux-riscv64-1.3.4.tgz}
     cpu: [riscv64]
     os: [linux]
     libc: [glibc]
 
   '@img/sharp-libvips-linux-s390x@1.3.4':
-    resolution: {integrity: sha512-ra/mB6MikESDUO7Yg+Mi95bFBb9GsObURuhnOv3OqknjGe9sZrG8tCe9q0xSIGrtLgvgw0gKnFWcK4blSgQOuQ==}
+    resolution: {integrity: sha512-ra/mB6MikESDUO7Yg+Mi95bFBb9GsObURuhnOv3OqknjGe9sZrG8tCe9q0xSIGrtLgvgw0gKnFWcK4blSgQOuQ==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-linux-s390x/-/sharp-libvips-linux-s390x-1.3.4.tgz}
     cpu: [s390x]
     os: [linux]
     libc: [glibc]
 
   '@img/sharp-libvips-linux-x64@1.3.4':
-    resolution: {integrity: sha512-GJ//SSXbnwSDes02umB3nDJLFcQzw8a18V8fyhqr6tV515tOEMdImjjxj1AoafMRz56F3PHgftnj1QEKSU1zkw==}
+    resolution: {integrity: sha512-GJ//SSXbnwSDes02umB3nDJLFcQzw8a18V8fyhqr6tV515tOEMdImjjxj1AoafMRz56F3PHgftnj1QEKSU1zkw==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-linux-x64/-/sharp-libvips-linux-x64-1.3.4.tgz}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
   '@img/sharp-libvips-linuxmusl-arm64@1.3.4':
-    resolution: {integrity: sha512-hvulFwtjUcagsis6BBxHwGFwWoNZjgYmULGVrZcyfNbjA8hKILbRxGg15/7w5HDyXHXUos/j6baAWqnCyQ2DWA==}
+    resolution: {integrity: sha512-hvulFwtjUcagsis6BBxHwGFwWoNZjgYmULGVrZcyfNbjA8hKILbRxGg15/7w5HDyXHXUos/j6baAWqnCyQ2DWA==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-linuxmusl-arm64/-/sharp-libvips-linuxmusl-arm64-1.3.4.tgz}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
   '@img/sharp-libvips-linuxmusl-x64@1.3.4':
-    resolution: {integrity: sha512-6zXKeE/p39I1AmA3cJG35eyBGNqNddLnUXjhwBnsGjFPWqf5VKkDBEqaEkPDoTEtkxwi2vv8Tcr2mDyP4So7Fg==}
+    resolution: {integrity: sha512-6zXKeE/p39I1AmA3cJG35eyBGNqNddLnUXjhwBnsGjFPWqf5VKkDBEqaEkPDoTEtkxwi2vv8Tcr2mDyP4So7Fg==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-libvips-linuxmusl-x64/-/sharp-libvips-linuxmusl-x64-1.3.4.tgz}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
   '@img/sharp-linux-arm64@0.35.5':
-    resolution: {integrity: sha512-LYVx5JTsOM2CBzmxreh+nl64/3H6Xb09iSLknqH47z2T2DFFxDeFLP5y4dJwe6H7uGQlHPyEEtIqyo3DYsRwdQ==}
+    resolution: {integrity: sha512-LYVx5JTsOM2CBzmxreh+nl64/3H6Xb09iSLknqH47z2T2DFFxDeFLP5y4dJwe6H7uGQlHPyEEtIqyo3DYsRwdQ==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-linux-arm64/-/sharp-linux-arm64-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
   '@img/sharp-linux-arm@0.35.5':
-    resolution: {integrity: sha512-LEaXK2WdXVK5ykcw0buWyPMsmLLL2vpHLD6yrNSW+JGEL3BZPA4tpKN6iaMc4AxTTAoaX/sU1rOL51lcIz48ZQ==}
+    resolution: {integrity: sha512-LEaXK2WdXVK5ykcw0buWyPMsmLLL2vpHLD6yrNSW+JGEL3BZPA4tpKN6iaMc4AxTTAoaX/sU1rOL51lcIz48ZQ==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-linux-arm/-/sharp-linux-arm-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
 
+  '@img/sharp-linux-loong64@0.35.5':
+    resolution: {integrity: sha512-r0hgfBkxVH+3okABwfslkMQUa7TA+d5/hABxVlNO1sVzKj0KsuSY+xdXaFvRqbgAZdwQmr/CBv7SHbKxxbA/AA==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-linux-loong64/-/sharp-linux-loong64-0.35.5.tgz}
+    engines: {node: '>=20.9.0'}
+    cpu: [loong64]
+    os: [linux]
+    libc: [glibc]
+
   '@img/sharp-linux-ppc64@0.35.5':
-    resolution: {integrity: sha512-QVxAAq8evVRI9ia2vqgwrmWucn5Dfv+JdWzj75pD8omHLPSP7f8p20O8jxzjCcuCEQEOtYOZUmX1hkiZ0kdevA==}
+    resolution: {integrity: sha512-QVxAAq8evVRI9ia2vqgwrmWucn5Dfv+JdWzj75pD8omHLPSP7f8p20O8jxzjCcuCEQEOtYOZUmX1hkiZ0kdevA==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-linux-ppc64/-/sharp-linux-ppc64-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
 
   '@img/sharp-linux-riscv64@0.35.5':
-    resolution: {integrity: sha512-LtdreXguaavKODPIfzJ4kffx7UNt1omwtK0rch4EBbbSTXPnxWmYSayXdLJw0fJzQ97kHt1gL/yh4tvU+nCyRQ==}
+    resolution: {integrity: sha512-LtdreXguaavKODPIfzJ4kffx7UNt1omwtK0rch4EBbbSTXPnxWmYSayXdLJw0fJzQ97kHt1gL/yh4tvU+nCyRQ==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-linux-riscv64/-/sharp-linux-riscv64-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [riscv64]
     os: [linux]
     libc: [glibc]
 
   '@img/sharp-linux-s390x@0.35.5':
-    resolution: {integrity: sha512-UZasTOFiYzotTsGOCu42BfUzP6Tu6Do/947iRm1RsLKvlllxwGcn4RN27LibGWceix4Y+Pmw3jsnTcCQIgWjqA==}
+    resolution: {integrity: sha512-UZasTOFiYzotTsGOCu42BfUzP6Tu6Do/947iRm1RsLKvlllxwGcn4RN27LibGWceix4Y+Pmw3jsnTcCQIgWjqA==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-linux-s390x/-/sharp-linux-s390x-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [s390x]
     os: [linux]
     libc: [glibc]
 
   '@img/sharp-linux-x64@0.35.5':
-    resolution: {integrity: sha512-SxFtLTeJInhAA9Q836kux2vZNeOBQEx658qvbboZScr0wIARym3IcGmW7KpVD5sbVg0Ojy+udFQdayYIZyoNog==}
+    resolution: {integrity: sha512-SxFtLTeJInhAA9Q836kux2vZNeOBQEx658qvbboZScr0wIARym3IcGmW7KpVD5sbVg0Ojy+udFQdayYIZyoNog==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-linux-x64/-/sharp-linux-x64-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
   '@img/sharp-linuxmusl-arm64@0.35.5':
-    resolution: {integrity: sha512-9HbMclmI1zlNkFRs3z9/eBtDjfD0sGlrX1z6b1qwmiFY5ElDLh4BC0LPBdVp7z1DXFiKlIcznf+ZlsuZzLxQqg==}
+    resolution: {integrity: sha512-9HbMclmI1zlNkFRs3z9/eBtDjfD0sGlrX1z6b1qwmiFY5ElDLh4BC0LPBdVp7z1DXFiKlIcznf+ZlsuZzLxQqg==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-linuxmusl-arm64/-/sharp-linuxmusl-arm64-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
   '@img/sharp-linuxmusl-x64@0.35.5':
-    resolution: {integrity: sha512-4KOphqB035HrVdqLZfCgMzzERrQkkzOwRhl4OAkRO1YCldbaFjySXMaK534Mo0V+LndnlJk+sbUyLeU0ULyD1A==}
+    resolution: {integrity: sha512-4KOphqB035HrVdqLZfCgMzzERrQkkzOwRhl4OAkRO1YCldbaFjySXMaK534Mo0V+LndnlJk+sbUyLeU0ULyD1A==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-linuxmusl-x64/-/sharp-linuxmusl-x64-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
   '@img/sharp-wasm32@0.35.5':
-    resolution: {integrity: sha512-Ptsga1su4tQx+LLF1ECS9U6nz5kmrXKo6XVbtR48Ke3ZRxxgaWBu7IDtEe1quo8hiupwm6WFqxVlXaSf7IINGQ==}
+    resolution: {integrity: sha512-Ptsga1su4tQx+LLF1ECS9U6nz5kmrXKo6XVbtR48Ke3ZRxxgaWBu7IDtEe1quo8hiupwm6WFqxVlXaSf7IINGQ==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-wasm32/-/sharp-wasm32-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
 
   '@img/sharp-webcontainers-wasm32@0.35.5':
-    resolution: {integrity: sha512-hfhF/FmoQyTUkA0bIKFOtw536BQSeBMe6BF6QyWlrPxT754+TFLaZ7sKKTfvvM0yJgKgaYTwnFCIZ/GuDw5SUA==}
+    resolution: {integrity: sha512-hfhF/FmoQyTUkA0bIKFOtw536BQSeBMe6BF6QyWlrPxT754+TFLaZ7sKKTfvvM0yJgKgaYTwnFCIZ/GuDw5SUA==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-webcontainers-wasm32/-/sharp-webcontainers-wasm32-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [wasm32]
 
   '@img/sharp-win32-arm64@0.35.5':
-    resolution: {integrity: sha512-X4t7g+7ZA5DKblCBEXGjUqqemj4vczING/5viFwAL8h4N3qYeyjwdCvRLHi4EdOUI+2Z7UFlp1VM+p/AuEtm6Q==}
+    resolution: {integrity: sha512-X4t7g+7ZA5DKblCBEXGjUqqemj4vczING/5viFwAL8h4N3qYeyjwdCvRLHi4EdOUI+2Z7UFlp1VM+p/AuEtm6Q==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-win32-arm64/-/sharp-win32-arm64-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [arm64]
     os: [win32]
 
   '@img/sharp-win32-ia32@0.35.5':
-    resolution: {integrity: sha512-5Zm82LoBc43nhwNybZlG7Y1KO//Zhsn306fQl29ZOuStHLGTo3BWL83q3cznX0poxSAMuYL1On/BHBxkBeKr6A==}
+    resolution: {integrity: sha512-5Zm82LoBc43nhwNybZlG7Y1KO//Zhsn306fQl29ZOuStHLGTo3BWL83q3cznX0poxSAMuYL1On/BHBxkBeKr6A==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-win32-ia32/-/sharp-win32-ia32-0.35.5.tgz}
     engines: {node: ^20.9.0}
     cpu: [ia32]
     os: [win32]
 
   '@img/sharp-win32-x64@0.35.5':
-    resolution: {integrity: sha512-x76eH0vEiHlcMQu8Y8IenntaACtddpT6W0wmXtWrnKcnKI7ME5DdgqhAD6SEWOEl1v2zDvkZDhFA9KnURwpfqg==}
+    resolution: {integrity: sha512-x76eH0vEiHlcMQu8Y8IenntaACtddpT6W0wmXtWrnKcnKI7ME5DdgqhAD6SEWOEl1v2zDvkZDhFA9KnURwpfqg==, tarball: https://registry.loongnix.cn:5873/@img%2fsharp-win32-x64/-/sharp-win32-x64-0.35.5.tgz}
     engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [win32]
@@ -22447,6 +22476,11 @@ packages:
       typescript:
         optional: true
 
+  '@loong64/lefthook-linux-loong64@2.1.10':
+    resolution: {integrity: sha512-j6Su1KQHqrwtGDnM8lT3ufLrKFoaHurX3cVIKzhr1lGk9UYR8w+fRKPFjoDU4wKtyz30RC9Fh2kx9svmM5qY4g==}
+    cpu: [loong64]
+    os: [linux]
+
   '@malept/cross-spawn-promise@2.0.0':
     resolution: {integrity: sha512-1DpKU0Z5ThltBwjNySMC14g0CkbyhCaz9FkhxqNsZI6uAPJXFS8cMXlBKo26FJ8ZuW6S9GCMcR9IO5k2X5/9Fg==}
     engines: {node: '>= 12.13.0'}
@@ -22494,10 +22528,12 @@ packages:
 
   '@modelcontextprotocol/server-everything@2026.8.31':
     resolution: {integrity: sha512-5U3OZh8Xq0Li4nA26l6uNvV9/1suMDuWSn+NjLZIhzinhMY6N3A4DCrxVecBGPf2PsNFKTEv5krxGPRwzxc7jQ==}
+    deprecated: 'Date-based versions are no longer published. This package has resumed semantic versioning at 1.0.0: install the latest version.'
     hasBin: true
 
   '@modelcontextprotocol/server-filesystem@2026.8.31':
     resolution: {integrity: sha512-kKaFkyAh6oipvc9+EAbJ552JafnMnOq5nzmzWkp1jJdBhTAAGpmIpWihUG1+rfNhmEFM98gUZDdCHCDD4v6a7Q==}
+    deprecated: 'Date-based versions are no longer published. This package has resumed semantic versioning at 1.0.0: install the latest version.'
     hasBin: true
 
   '@modelcontextprotocol/server@2.2.0':
@@ -22832,153 +22868,165 @@ packages:
     os: [win32]
 
   '@oxlint-tsgolint/darwin-arm64@7.0.2001':
-    resolution: {integrity: sha512-CUJEdbSZ54+Xy9OXqOhWLTKZKV0BBiV7C2i/ygyVmXtkUNXx5YCzN8DpSSshTAKktoL7S+tnQ/ftFG/i7X896w==}
+    resolution: {integrity: sha512-CUJEdbSZ54+Xy9OXqOhWLTKZKV0BBiV7C2i/ygyVmXtkUNXx5YCzN8DpSSshTAKktoL7S+tnQ/ftFG/i7X896w==, tarball: https://registry.loongnix.cn:5873/@oxlint-tsgolint%2fdarwin-arm64/-/darwin-arm64-7.0.2001.tgz}
     cpu: [arm64]
     os: [darwin]
 
   '@oxlint-tsgolint/darwin-x64@7.0.2001':
-    resolution: {integrity: sha512-pXfBb5BqONCcgrXQNUZWXgiYmRSWJzd97S8i41VVOh6ut0tyo+cJ5FKFpczDHxiVNfj/3e7c9B4MtztNdpIVCw==}
+    resolution: {integrity: sha512-pXfBb5BqONCcgrXQNUZWXgiYmRSWJzd97S8i41VVOh6ut0tyo+cJ5FKFpczDHxiVNfj/3e7c9B4MtztNdpIVCw==, tarball: https://registry.loongnix.cn:5873/@oxlint-tsgolint%2fdarwin-x64/-/darwin-x64-7.0.2001.tgz}
     cpu: [x64]
     os: [darwin]
 
   '@oxlint-tsgolint/linux-arm64@7.0.2001':
-    resolution: {integrity: sha512-roP7zujb/QDPzDwEKsFFpzNHHy91/Y7oX9vQXk78ekyZtcQj1QXDIMH33gjDdHBfRl4K9pZ36xhRgrP4Zr+R8A==}
+    resolution: {integrity: sha512-roP7zujb/QDPzDwEKsFFpzNHHy91/Y7oX9vQXk78ekyZtcQj1QXDIMH33gjDdHBfRl4K9pZ36xhRgrP4Zr+R8A==, tarball: https://registry.loongnix.cn:5873/@oxlint-tsgolint%2flinux-arm64/-/linux-arm64-7.0.2001.tgz}
     cpu: [arm64]
     os: [linux]
 
+  '@oxlint-tsgolint/linux-loong64@7.0.2001':
+    resolution: {integrity: sha512-iXWMzQGmJ+HST/GqKnvSy4QBMEqusMZJg3+BuOdNAnl8ZzC17nedb8qUA9PsKSkEGArQ32ywIsuHEHd+WWaRGQ==, tarball: https://registry.loongnix.cn:5873/@oxlint-tsgolint%2flinux-loong64/-/linux-loong64-7.0.2001.tgz}
+    cpu: [loong64]
+    os: [linux]
+
   '@oxlint-tsgolint/linux-x64@7.0.2001':
-    resolution: {integrity: sha512-UDezNqdECVmngu2TPnjaS1YoAmcTaBoI5lV9vk3VahBxoi+I5r9k3iJTT7qZoYWOXTD/7T7bNcwRgrocR6BscQ==}
+    resolution: {integrity: sha512-UDezNqdECVmngu2TPnjaS1YoAmcTaBoI5lV9vk3VahBxoi+I5r9k3iJTT7qZoYWOXTD/7T7bNcwRgrocR6BscQ==, tarball: https://registry.loongnix.cn:5873/@oxlint-tsgolint%2flinux-x64/-/linux-x64-7.0.2001.tgz}
     cpu: [x64]
     os: [linux]
 
   '@oxlint-tsgolint/win32-arm64@7.0.2001':
-    resolution: {integrity: sha512-uJZhqB6pdXLuN+AD1F5082byyQti/NPmJA77GtcFlmT2HzRelqbNls3SaIqxpjdFgvSBF9g0yOKGBkGFg7kX8Q==}
+    resolution: {integrity: sha512-uJZhqB6pdXLuN+AD1F5082byyQti/NPmJA77GtcFlmT2HzRelqbNls3SaIqxpjdFgvSBF9g0yOKGBkGFg7kX8Q==, tarball: https://registry.loongnix.cn:5873/@oxlint-tsgolint%2fwin32-arm64/-/win32-arm64-7.0.2001.tgz}
     cpu: [arm64]
     os: [win32]
 
   '@oxlint-tsgolint/win32-x64@7.0.2001':
-    resolution: {integrity: sha512-FkDRm8hx9OwzGQqyWG1tO5QrTLRApff9DzSgpz9QZau37BR8d1VYKOxMLGf6shPZntJFoTwIIJYT68VndYDCog==}
+    resolution: {integrity: sha512-FkDRm8hx9OwzGQqyWG1tO5QrTLRApff9DzSgpz9QZau37BR8d1VYKOxMLGf6shPZntJFoTwIIJYT68VndYDCog==, tarball: https://registry.loongnix.cn:5873/@oxlint-tsgolint%2fwin32-x64/-/win32-x64-7.0.2001.tgz}
     cpu: [x64]
     os: [win32]
 
   '@oxlint/binding-android-arm-eabi@1.81.0':
-    resolution: {integrity: sha512-IcCRsXiedJoJopY6mpZUBEeVFsUrutmrG7dZ87zMuKJlhg70Ora9bBl1WcCxZQtyI10YpnVdEso5oCg7YcfSHw==}
+    resolution: {integrity: sha512-IcCRsXiedJoJopY6mpZUBEeVFsUrutmrG7dZ87zMuKJlhg70Ora9bBl1WcCxZQtyI10YpnVdEso5oCg7YcfSHw==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-android-arm-eabi/-/binding-android-arm-eabi-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm]
     os: [android]
 
   '@oxlint/binding-android-arm64@1.81.0':
-    resolution: {integrity: sha512-GRrIPyTGVhx3L3h+0T5xT2A0jFAcdPv4+IfuXpGDLIdl6XeYhgg/zw72A5ILZoUgRqZuM8F1y+V/gfDriXSxzQ==}
+    resolution: {integrity: sha512-GRrIPyTGVhx3L3h+0T5xT2A0jFAcdPv4+IfuXpGDLIdl6XeYhgg/zw72A5ILZoUgRqZuM8F1y+V/gfDriXSxzQ==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-android-arm64/-/binding-android-arm64-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [android]
 
   '@oxlint/binding-darwin-arm64@1.81.0':
-    resolution: {integrity: sha512-qNQ9tXRgLuKbqSV1S2h9h4KPHjbovO7RRR2/enUOtHzTkFZ7B9X5zqqHJua8dRyc7dBy7Aoyq5pqTSLFVcAzGQ==}
+    resolution: {integrity: sha512-qNQ9tXRgLuKbqSV1S2h9h4KPHjbovO7RRR2/enUOtHzTkFZ7B9X5zqqHJua8dRyc7dBy7Aoyq5pqTSLFVcAzGQ==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-darwin-arm64/-/binding-darwin-arm64-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [darwin]
 
   '@oxlint/binding-darwin-x64@1.81.0':
-    resolution: {integrity: sha512-q0QTm32jWga2Gv4j7IaVZN0jYMi9UV73sWVgFtDA4iIfqwMCLLZ3ve+9KwfYtsaKZSgQhmPaogeZWqDZpcY1Pw==}
+    resolution: {integrity: sha512-q0QTm32jWga2Gv4j7IaVZN0jYMi9UV73sWVgFtDA4iIfqwMCLLZ3ve+9KwfYtsaKZSgQhmPaogeZWqDZpcY1Pw==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-darwin-x64/-/binding-darwin-x64-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [darwin]
 
   '@oxlint/binding-freebsd-x64@1.81.0':
-    resolution: {integrity: sha512-/+8wVWDXEC7wHVAhOc59Fw/SkMc1arLkFD8iQCaSsmzenK1X4doFqquL9H1wrtGUzaiycVqkf/sSpcILK6W1UA==}
+    resolution: {integrity: sha512-/+8wVWDXEC7wHVAhOc59Fw/SkMc1arLkFD8iQCaSsmzenK1X4doFqquL9H1wrtGUzaiycVqkf/sSpcILK6W1UA==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-freebsd-x64/-/binding-freebsd-x64-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [freebsd]
 
   '@oxlint/binding-linux-arm-gnueabihf@1.81.0':
-    resolution: {integrity: sha512-4xt422FEgioRq9hAL4Tq7fujGUWnc8z1BJ+Oi8RN8vB8axaP+sdK6a2xdlcQCCYnJg9QMuMFS0AucuIFx/EacA==}
+    resolution: {integrity: sha512-4xt422FEgioRq9hAL4Tq7fujGUWnc8z1BJ+Oi8RN8vB8axaP+sdK6a2xdlcQCCYnJg9QMuMFS0AucuIFx/EacA==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm]
     os: [linux]
 
   '@oxlint/binding-linux-arm-musleabihf@1.81.0':
-    resolution: {integrity: sha512-u3vna8KdGplH4DRCW9K54D68fcMo7IxVrkCJWwXnIhwtBdnDnYrmzOUA/XjmBlPpcLsgw9Z5BNdY4za9+Dj+MQ==}
+    resolution: {integrity: sha512-u3vna8KdGplH4DRCW9K54D68fcMo7IxVrkCJWwXnIhwtBdnDnYrmzOUA/XjmBlPpcLsgw9Z5BNdY4za9+Dj+MQ==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-arm-musleabihf/-/binding-linux-arm-musleabihf-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm]
     os: [linux]
 
   '@oxlint/binding-linux-arm64-gnu@1.81.0':
-    resolution: {integrity: sha512-3j9k+gsYsE7nv71GWotXsqsa2l9/aJenD7dVHNt/CBvsb0SgRjSMnHFeP59IXUAl1wvVFhqGl2wJNMwWU3UBlA==}
+    resolution: {integrity: sha512-3j9k+gsYsE7nv71GWotXsqsa2l9/aJenD7dVHNt/CBvsb0SgRjSMnHFeP59IXUAl1wvVFhqGl2wJNMwWU3UBlA==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-arm64-gnu/-/binding-linux-arm64-gnu-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
   '@oxlint/binding-linux-arm64-musl@1.81.0':
-    resolution: {integrity: sha512-k5iAp3dNxW0/uDCBY+WSm8jKB2szu7SkEQZdgRRpDXvuDd69vvDcqhB3A/pWCfCwXyenjNjFn9Td1fVoyAc+Yg==}
+    resolution: {integrity: sha512-k5iAp3dNxW0/uDCBY+WSm8jKB2szu7SkEQZdgRRpDXvuDd69vvDcqhB3A/pWCfCwXyenjNjFn9Td1fVoyAc+Yg==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-arm64-musl/-/binding-linux-arm64-musl-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
+  '@oxlint/binding-linux-loong64-gnu@1.81.0':
+    resolution: {integrity: sha512-OndNELQSBfMvx2/JrFw41MgiQ/8To01gpvzAzrs1NqSjc4PFLqJZBY4YkiwAFiz3NS/SDndNcPOHp7S9h7rNKw==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-loong64-gnu/-/binding-linux-loong64-gnu-1.81.0.tgz}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [loong64]
+    os: [linux]
+    libc: [glibc]
+
   '@oxlint/binding-linux-ppc64-gnu@1.81.0':
-    resolution: {integrity: sha512-TFqLja3uYmVSte6nof9GWrex9Z8WgdZrNiLC6Te5rXGDqXB2y4j/26iFhwosXiAFqDhE9JJVuuCkDKLwptTn1g==}
+    resolution: {integrity: sha512-TFqLja3uYmVSte6nof9GWrex9Z8WgdZrNiLC6Te5rXGDqXB2y4j/26iFhwosXiAFqDhE9JJVuuCkDKLwptTn1g==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-ppc64-gnu/-/binding-linux-ppc64-gnu-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
 
   '@oxlint/binding-linux-riscv64-gnu@1.81.0':
-    resolution: {integrity: sha512-UEcySvGS0NOVo7h7n7CYyJL9+6gFAh7Zc/ToDXVScFvzHSTIxtzkMVU30rmQ6+nQ1LF+UdiRDdJajpDu+OylLg==}
+    resolution: {integrity: sha512-UEcySvGS0NOVo7h7n7CYyJL9+6gFAh7Zc/ToDXVScFvzHSTIxtzkMVU30rmQ6+nQ1LF+UdiRDdJajpDu+OylLg==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-riscv64-gnu/-/binding-linux-riscv64-gnu-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [riscv64]
     os: [linux]
     libc: [glibc]
 
   '@oxlint/binding-linux-riscv64-musl@1.81.0':
-    resolution: {integrity: sha512-H+diDbhD00+wI1IRP8Kz88x/lat+DgtoBJzoTthS16xkTJGNaEkfb8gzmd1rzc/2uDQQMl7GNl+JFUacVeWxIA==}
+    resolution: {integrity: sha512-H+diDbhD00+wI1IRP8Kz88x/lat+DgtoBJzoTthS16xkTJGNaEkfb8gzmd1rzc/2uDQQMl7GNl+JFUacVeWxIA==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-riscv64-musl/-/binding-linux-riscv64-musl-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [riscv64]
     os: [linux]
     libc: [musl]
 
   '@oxlint/binding-linux-s390x-gnu@1.81.0':
-    resolution: {integrity: sha512-8znJ/5TekjOKg1j1Acho4PJMdiAHLtlcXuWEiipOhAMV6rQcXdmDdXCbheyDczN6TjBwiNfjcP81k4AthrKRzw==}
+    resolution: {integrity: sha512-8znJ/5TekjOKg1j1Acho4PJMdiAHLtlcXuWEiipOhAMV6rQcXdmDdXCbheyDczN6TjBwiNfjcP81k4AthrKRzw==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-s390x-gnu/-/binding-linux-s390x-gnu-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [s390x]
     os: [linux]
     libc: [glibc]
 
   '@oxlint/binding-linux-x64-gnu@1.81.0':
-    resolution: {integrity: sha512-Q2Wj70yFsvn5QjlmifFzbj4H+kJy53bwqc41o1fzoM7MpLV1NIbhg/LpWXRfC6KOkSAdUx1Wd8VJsdPmhp/HRA==}
+    resolution: {integrity: sha512-Q2Wj70yFsvn5QjlmifFzbj4H+kJy53bwqc41o1fzoM7MpLV1NIbhg/LpWXRfC6KOkSAdUx1Wd8VJsdPmhp/HRA==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-x64-gnu/-/binding-linux-x64-gnu-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
   '@oxlint/binding-linux-x64-musl@1.81.0':
-    resolution: {integrity: sha512-cPInHp/ddEe5qkyK2IiyQ8Q3Mp2oLLEhhsGgTK2oZx4L6+llGam1H1yBvJZ7qHfOXj8N3hxBS8sj4tO+gtFlIg==}
+    resolution: {integrity: sha512-cPInHp/ddEe5qkyK2IiyQ8Q3Mp2oLLEhhsGgTK2oZx4L6+llGam1H1yBvJZ7qHfOXj8N3hxBS8sj4tO+gtFlIg==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-linux-x64-musl/-/binding-linux-x64-musl-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
   '@oxlint/binding-openharmony-arm64@1.81.0':
-    resolution: {integrity: sha512-0CQxSX4ajqm07AHBf5U33qQzXKdd7wtq/oTL/7vpY6RNNuxrRi8W4bqUV1Jyu/vj+9KmxQyDhxfeVX1nQL6kfg==}
+    resolution: {integrity: sha512-0CQxSX4ajqm07AHBf5U33qQzXKdd7wtq/oTL/7vpY6RNNuxrRi8W4bqUV1Jyu/vj+9KmxQyDhxfeVX1nQL6kfg==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-openharmony-arm64/-/binding-openharmony-arm64-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [openharmony]
 
   '@oxlint/binding-win32-arm64-msvc@1.81.0':
-    resolution: {integrity: sha512-l0hbeISm9673hVrrQU8j/p2M7YH9Ouoj7p7E/QM55NTrKVLP+P3PF8hLu+OY+x0VtGRW+ggiQKZqmdYps9H+TA==}
+    resolution: {integrity: sha512-l0hbeISm9673hVrrQU8j/p2M7YH9Ouoj7p7E/QM55NTrKVLP+P3PF8hLu+OY+x0VtGRW+ggiQKZqmdYps9H+TA==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-win32-arm64-msvc/-/binding-win32-arm64-msvc-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [win32]
 
   '@oxlint/binding-win32-ia32-msvc@1.81.0':
-    resolution: {integrity: sha512-ksqPP5jbFXcYreEQ7zdJh06rJQBymCTyGRCdaXjfcf2aG4f8KxUWY5wcgYHmaTK+FJ4bPG5sUAdOX+6trnH1JA==}
+    resolution: {integrity: sha512-ksqPP5jbFXcYreEQ7zdJh06rJQBymCTyGRCdaXjfcf2aG4f8KxUWY5wcgYHmaTK+FJ4bPG5sUAdOX+6trnH1JA==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-win32-ia32-msvc/-/binding-win32-ia32-msvc-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [ia32]
     os: [win32]
 
   '@oxlint/binding-win32-x64-msvc@1.81.0':
-    resolution: {integrity: sha512-IZuUCwGw9emG5JtCp+fYGB+Z4OWEoeEcM8R5BA1pYw63/ieYFVdcU2ylxTpHbVHSenZnsYE+ZZ20uHAJszQ4cA==}
+    resolution: {integrity: sha512-IZuUCwGw9emG5JtCp+fYGB+Z4OWEoeEcM8R5BA1pYw63/ieYFVdcU2ylxTpHbVHSenZnsYE+ZZ20uHAJszQ4cA==, tarball: https://registry.loongnix.cn:5873/@oxlint%2fbinding-win32-x64-msvc/-/binding-win32-x64-msvc-1.81.0.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
@@ -23061,201 +23109,215 @@ packages:
     engines: {node: '>= 22'}
 
   '@rolldown/binding-android-arm-eabi@1.2.7':
-    resolution: {integrity: sha512-EypzgnYCwyVY4NDHKzGmNJT5b+XaQEBniHxsMdeIQLB/tcCzZnhqrzHpZFbX9iaxx+5RiB8caATBtfvZP7zVxQ==}
+    resolution: {integrity: sha512-EypzgnYCwyVY4NDHKzGmNJT5b+XaQEBniHxsMdeIQLB/tcCzZnhqrzHpZFbX9iaxx+5RiB8caATBtfvZP7zVxQ==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-android-arm-eabi/-/binding-android-arm-eabi-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm]
     os: [android]
 
   '@rolldown/binding-android-arm64@1.1.1':
-    resolution: {integrity: sha512-BLf9Wak/gfwVb7NQTQW4wBgL3oAfPy7ArEkhwV543OVw/uY6B47z5xYsqPSZ9PDOorvURPinws6ThaFuNgGLgA==}
+    resolution: {integrity: sha512-BLf9Wak/gfwVb7NQTQW4wBgL3oAfPy7ArEkhwV543OVw/uY6B47z5xYsqPSZ9PDOorvURPinws6ThaFuNgGLgA==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-android-arm64/-/binding-android-arm64-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [android]
 
   '@rolldown/binding-android-arm64@1.2.7':
-    resolution: {integrity: sha512-l17HE9EweWaqJZhuUuNBN/FzM62xw+DECVnJyvMsxn8vJFAGLy5QfLDoYAcronkAN8VxKZHezDpulHDPx95vFw==}
+    resolution: {integrity: sha512-l17HE9EweWaqJZhuUuNBN/FzM62xw+DECVnJyvMsxn8vJFAGLy5QfLDoYAcronkAN8VxKZHezDpulHDPx95vFw==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-android-arm64/-/binding-android-arm64-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [android]
 
   '@rolldown/binding-darwin-arm64@1.1.1':
-    resolution: {integrity: sha512-rRZRPy/Ynb+Mxu0O6tfPldHeDgAn0sRij+IOUy6sFdUlv3hArGW/DloE3GfAxtqpOJuRNgF74Nr5gM4xBeU2jQ==}
+    resolution: {integrity: sha512-rRZRPy/Ynb+Mxu0O6tfPldHeDgAn0sRij+IOUy6sFdUlv3hArGW/DloE3GfAxtqpOJuRNgF74Nr5gM4xBeU2jQ==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-darwin-arm64/-/binding-darwin-arm64-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [darwin]
 
   '@rolldown/binding-darwin-arm64@1.2.7':
-    resolution: {integrity: sha512-8ED8ELFvHXc6OCETIn4gXObPiaR6bckM/ipXtbzlPVDRMBfEGjCKgO90F9YtfdpDatVx/ZQw7aZ1vUMf/+T3Mw==}
+    resolution: {integrity: sha512-8ED8ELFvHXc6OCETIn4gXObPiaR6bckM/ipXtbzlPVDRMBfEGjCKgO90F9YtfdpDatVx/ZQw7aZ1vUMf/+T3Mw==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-darwin-arm64/-/binding-darwin-arm64-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [darwin]
 
   '@rolldown/binding-darwin-x64@1.1.1':
-    resolution: {integrity: sha512-/MtefPxhKPyWWFM8L45OWiEqRf+eSU2Qv9ZAyTaoZOoGcoPKxbbhjTJO2/U2IThv0uDZ4NWHc3/oTsR6IEOtww==}
+    resolution: {integrity: sha512-/MtefPxhKPyWWFM8L45OWiEqRf+eSU2Qv9ZAyTaoZOoGcoPKxbbhjTJO2/U2IThv0uDZ4NWHc3/oTsR6IEOtww==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-darwin-x64/-/binding-darwin-x64-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [darwin]
 
   '@rolldown/binding-darwin-x64@1.2.7':
-    resolution: {integrity: sha512-/WPripjtiAIZ2tWY7ddijORT0Ujg87wxWW/qcoFVCKAWVDPhtY0xr7Dj0M3GyNGz60jGwTElhro/mkF9dT7dDQ==}
+    resolution: {integrity: sha512-/WPripjtiAIZ2tWY7ddijORT0Ujg87wxWW/qcoFVCKAWVDPhtY0xr7Dj0M3GyNGz60jGwTElhro/mkF9dT7dDQ==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-darwin-x64/-/binding-darwin-x64-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [darwin]
 
   '@rolldown/binding-freebsd-x64@1.1.1':
-    resolution: {integrity: sha512-202K+cpIi1kx/Zn7AtxBi4LTXSY67Aszb2K9rNsuW7FeBeh0nqoNmYLOSZidV0p88VPBzMmTZcHAdPNo3kRYzQ==}
+    resolution: {integrity: sha512-202K+cpIi1kx/Zn7AtxBi4LTXSY67Aszb2K9rNsuW7FeBeh0nqoNmYLOSZidV0p88VPBzMmTZcHAdPNo3kRYzQ==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-freebsd-x64/-/binding-freebsd-x64-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [freebsd]
 
   '@rolldown/binding-freebsd-x64@1.2.7':
-    resolution: {integrity: sha512-14DI4NcqpvbICxSnGLx3PmtDaWqRP/KGSGb6C+JLLVPeZRl6dKdHba3pGsqT3vpdTqhEYIPG0MMQ8c0xYqoJxA==}
+    resolution: {integrity: sha512-14DI4NcqpvbICxSnGLx3PmtDaWqRP/KGSGb6C+JLLVPeZRl6dKdHba3pGsqT3vpdTqhEYIPG0MMQ8c0xYqoJxA==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-freebsd-x64/-/binding-freebsd-x64-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [freebsd]
 
   '@rolldown/binding-linux-arm-gnueabihf@1.1.1':
-    resolution: {integrity: sha512-wl9NfeXNUwrXtUc063tddmZFUI6qiNs1CNOwni0OL4vC7MqVSYugra3ZgtDmtVy8e0DluJTENmzIv2BwqLzT4Q==}
+    resolution: {integrity: sha512-wl9NfeXNUwrXtUc063tddmZFUI6qiNs1CNOwni0OL4vC7MqVSYugra3ZgtDmtVy8e0DluJTENmzIv2BwqLzT4Q==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm]
     os: [linux]
 
   '@rolldown/binding-linux-arm-gnueabihf@1.2.7':
-    resolution: {integrity: sha512-bxrWIRvHWQvbJwi+VIie/kDJmQxcNE6xxWwZdqF/ExVAigtHkv54WTLQPb+QsZdnFy18fg7JPfWGL0RH6vwIlQ==}
+    resolution: {integrity: sha512-bxrWIRvHWQvbJwi+VIie/kDJmQxcNE6xxWwZdqF/ExVAigtHkv54WTLQPb+QsZdnFy18fg7JPfWGL0RH6vwIlQ==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-arm-gnueabihf/-/binding-linux-arm-gnueabihf-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm]
     os: [linux]
 
   '@rolldown/binding-linux-arm64-gnu@1.1.1':
-    resolution: {integrity: sha512-at2EO4o7D/PJLC4Xik16bU4CcjQE2tSv1LfqMA0TRYQYQihRm3gZeDB8xaX28A9SFedibcAk5DeMCKt4REKG0A==}
+    resolution: {integrity: sha512-at2EO4o7D/PJLC4Xik16bU4CcjQE2tSv1LfqMA0TRYQYQihRm3gZeDB8xaX28A9SFedibcAk5DeMCKt4REKG0A==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-arm64-gnu/-/binding-linux-arm64-gnu-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
   '@rolldown/binding-linux-arm64-gnu@1.2.7':
-    resolution: {integrity: sha512-toOY2BChBZyuxU7OYX6Tn389di4IzAqPTycVcci0O7FSfBqzRB3RZn+K5Is6ANf4tmgRd/K1yZTsNTXbkXsnLg==}
+    resolution: {integrity: sha512-toOY2BChBZyuxU7OYX6Tn389di4IzAqPTycVcci0O7FSfBqzRB3RZn+K5Is6ANf4tmgRd/K1yZTsNTXbkXsnLg==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-arm64-gnu/-/binding-linux-arm64-gnu-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
   '@rolldown/binding-linux-arm64-musl@1.1.1':
-    resolution: {integrity: sha512-5PUjZx366h9tkJTPJF5eibxOlK3sGoeRiBJLLjjEB5/kLDuhr6qB3LkhqLz1smXNgsX+pBhnbcJBrPE30HznAA==}
+    resolution: {integrity: sha512-5PUjZx366h9tkJTPJF5eibxOlK3sGoeRiBJLLjjEB5/kLDuhr6qB3LkhqLz1smXNgsX+pBhnbcJBrPE30HznAA==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-arm64-musl/-/binding-linux-arm64-musl-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
   '@rolldown/binding-linux-arm64-musl@1.2.7':
-    resolution: {integrity: sha512-lAIXTH/aiLRLxsTgQvfhjo4K1ydWIp00+V0voOr9beb/9ZmkUFrSIb03dXNFRgMNvkE6oGsF10ioQ6UsI+vS5Q==}
+    resolution: {integrity: sha512-lAIXTH/aiLRLxsTgQvfhjo4K1ydWIp00+V0voOr9beb/9ZmkUFrSIb03dXNFRgMNvkE6oGsF10ioQ6UsI+vS5Q==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-arm64-musl/-/binding-linux-arm64-musl-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
+  '@rolldown/binding-linux-loong64-gnu@1.1.1':
+    resolution: {integrity: sha512-P9OQjmfYVfXf+Dp2A7XXzSXcfC9N9VMUGWZKu0UzSSJEPJ/25hKscVEMzvTxyu3c8EpFFsRER0X3kkwvlQlRdw==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-loong64-gnu/-/binding-linux-loong64-gnu-1.1.1.tgz}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [loong64]
+    os: [linux]
+    libc: [glibc]
+
+  '@rolldown/binding-linux-loong64-gnu@1.2.7':
+    resolution: {integrity: sha512-LsNSgbRrt2KdOdPhbVAu5j58578phR1XZa36w1expF9AXGuTIq/CJp4FEjtFTxyfVe2m7lzKj+J6hTqE6wuvjg==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-loong64-gnu/-/binding-linux-loong64-gnu-1.2.7.tgz}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    cpu: [loong64]
+    os: [linux]
+    libc: [glibc]
+
   '@rolldown/binding-linux-ppc64-gnu@1.1.1':
-    resolution: {integrity: sha512-1WK84XPeio3tjP1sM/TMXiC0G1i1iq1qGZ71KfNQjEFLU1kwD+Cv5T8nGySg/JUFwLbaScu6ve9DmeXlmqpkFA==}
+    resolution: {integrity: sha512-1WK84XPeio3tjP1sM/TMXiC0G1i1iq1qGZ71KfNQjEFLU1kwD+Cv5T8nGySg/JUFwLbaScu6ve9DmeXlmqpkFA==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-ppc64-gnu/-/binding-linux-ppc64-gnu-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
 
   '@rolldown/binding-linux-ppc64-gnu@1.2.7':
-    resolution: {integrity: sha512-kdnwS28Pkenp/mZMRwjXXXwxQ7pIsm+bF919LUK93BOyhcLsrVKdP2p9fxpiPNPAbNuch8ypQt0pm2P2LYCAGg==}
+    resolution: {integrity: sha512-kdnwS28Pkenp/mZMRwjXXXwxQ7pIsm+bF919LUK93BOyhcLsrVKdP2p9fxpiPNPAbNuch8ypQt0pm2P2LYCAGg==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-ppc64-gnu/-/binding-linux-ppc64-gnu-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [ppc64]
     os: [linux]
     libc: [glibc]
 
   '@rolldown/binding-linux-s390x-gnu@1.1.1':
-    resolution: {integrity: sha512-1nS1X5z1uMJ369RU25hTpKCFvUwXZp12dIzlzk4S+UxCTcSVGsAE6tzkOSufv/7jnmAtK0ZlrsJxh2fGmsnVSw==}
+    resolution: {integrity: sha512-1nS1X5z1uMJ369RU25hTpKCFvUwXZp12dIzlzk4S+UxCTcSVGsAE6tzkOSufv/7jnmAtK0ZlrsJxh2fGmsnVSw==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-s390x-gnu/-/binding-linux-s390x-gnu-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [s390x]
     os: [linux]
     libc: [glibc]
 
   '@rolldown/binding-linux-s390x-gnu@1.2.7':
-    resolution: {integrity: sha512-516OdsyLdr5E65paF3yBF55t8mfm9+gmtCsK3xI7XKXIT7EfRlHhxL8K/NR6Hu8BWSgF5+1w74lTL0+nxcc8Qw==}
+    resolution: {integrity: sha512-516OdsyLdr5E65paF3yBF55t8mfm9+gmtCsK3xI7XKXIT7EfRlHhxL8K/NR6Hu8BWSgF5+1w74lTL0+nxcc8Qw==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-s390x-gnu/-/binding-linux-s390x-gnu-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [s390x]
     os: [linux]
     libc: [glibc]
 
   '@rolldown/binding-linux-x64-gnu@1.1.1':
-    resolution: {integrity: sha512-NwX/wspnq4vYyMFsqbYvzums3ki/Tk8FZbMzMAovPDp3OfLeYKby/D+9osokadXuYEV3OvpeHlwnr/bG8QMixA==}
+    resolution: {integrity: sha512-NwX/wspnq4vYyMFsqbYvzums3ki/Tk8FZbMzMAovPDp3OfLeYKby/D+9osokadXuYEV3OvpeHlwnr/bG8QMixA==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-x64-gnu/-/binding-linux-x64-gnu-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
   '@rolldown/binding-linux-x64-gnu@1.2.7':
-    resolution: {integrity: sha512-r8/z8n7GFaYRln3xmP1Cxy0HH/HLM0uBUPkEuSVEfKGDA89M0FsZRZJRSwe/tJjRx+fpH/gjorfhB8tmEbSFLA==}
+    resolution: {integrity: sha512-r8/z8n7GFaYRln3xmP1Cxy0HH/HLM0uBUPkEuSVEfKGDA89M0FsZRZJRSwe/tJjRx+fpH/gjorfhB8tmEbSFLA==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-x64-gnu/-/binding-linux-x64-gnu-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
   '@rolldown/binding-linux-x64-musl@1.1.1':
-    resolution: {integrity: sha512-+n46LhDrJFQM+229y4oXtVpj1G50U/+XuHMlpnisFTEXhrg9f/YIjp/HymX+PVJjBEr7XHRs3CFLelV464pqwA==}
+    resolution: {integrity: sha512-+n46LhDrJFQM+229y4oXtVpj1G50U/+XuHMlpnisFTEXhrg9f/YIjp/HymX+PVJjBEr7XHRs3CFLelV464pqwA==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-x64-musl/-/binding-linux-x64-musl-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
   '@rolldown/binding-linux-x64-musl@1.2.7':
-    resolution: {integrity: sha512-pAsE8iiDxUg1xBqdhrTfg45AVDVpirjz00sblEYClGNNcMnDb+e8beQgqIAw6LvauX/APvgxUnwrgun/YYGBhw==}
+    resolution: {integrity: sha512-pAsE8iiDxUg1xBqdhrTfg45AVDVpirjz00sblEYClGNNcMnDb+e8beQgqIAw6LvauX/APvgxUnwrgun/YYGBhw==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-linux-x64-musl/-/binding-linux-x64-musl-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
   '@rolldown/binding-openharmony-arm64@1.1.1':
-    resolution: {integrity: sha512-qGwEu47zOWYo7LdRHhCWTNhzwGtxXpdY6CERs8QEOqC0PXGGics/e3vHnyEUKt8xK6YkbZXFUCeklrpB6js8ag==}
+    resolution: {integrity: sha512-qGwEu47zOWYo7LdRHhCWTNhzwGtxXpdY6CERs8QEOqC0PXGGics/e3vHnyEUKt8xK6YkbZXFUCeklrpB6js8ag==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-openharmony-arm64/-/binding-openharmony-arm64-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [openharmony]
 
   '@rolldown/binding-openharmony-arm64@1.2.7':
-    resolution: {integrity: sha512-lTcIYmmnQQA8Or/2DatS6oSqcdLHvendjS+zLu+FwgToynWMRSmQdpM65fTANJgIS4mjbMOo5KT2lnT9SAb96w==}
+    resolution: {integrity: sha512-lTcIYmmnQQA8Or/2DatS6oSqcdLHvendjS+zLu+FwgToynWMRSmQdpM65fTANJgIS4mjbMOo5KT2lnT9SAb96w==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-openharmony-arm64/-/binding-openharmony-arm64-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [openharmony]
 
   '@rolldown/binding-wasm32-wasi@1.1.1':
-    resolution: {integrity: sha512-qczfgEH8u0wHGGOXtA7UMAybNKuQjjEXairyQaw4WzjiMztfbgatG1h4OKays/smhtwbWltpKCRGtVhU6h40Sg==}
+    resolution: {integrity: sha512-qczfgEH8u0wHGGOXtA7UMAybNKuQjjEXairyQaw4WzjiMztfbgatG1h4OKays/smhtwbWltpKCRGtVhU6h40Sg==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-wasm32-wasi/-/binding-wasm32-wasi-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [wasm32]
 
   '@rolldown/binding-win32-arm64-msvc@1.1.1':
-    resolution: {integrity: sha512-4psXSh63mSbwJF+mB8/9yfUUEzBiHYcUjxa32EO9ZwKy0Ypwjcg4F10D8SvVXgd+isy2UUUjF9HJJnDu1T/4Gg==}
+    resolution: {integrity: sha512-4psXSh63mSbwJF+mB8/9yfUUEzBiHYcUjxa32EO9ZwKy0Ypwjcg4F10D8SvVXgd+isy2UUUjF9HJJnDu1T/4Gg==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-win32-arm64-msvc/-/binding-win32-arm64-msvc-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [win32]
 
   '@rolldown/binding-win32-arm64-msvc@1.2.7':
-    resolution: {integrity: sha512-e3Gu3WxbNk/UqQhxqU7YIYO+9ZBvWNz3U+h/qRFosscMFzdRPbXYSaSWgSnklv2fz1TgzBTcti2z35c/7irsHw==}
+    resolution: {integrity: sha512-e3Gu3WxbNk/UqQhxqU7YIYO+9ZBvWNz3U+h/qRFosscMFzdRPbXYSaSWgSnklv2fz1TgzBTcti2z35c/7irsHw==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-win32-arm64-msvc/-/binding-win32-arm64-msvc-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [arm64]
     os: [win32]
 
   '@rolldown/binding-win32-x64-msvc@1.1.1':
-    resolution: {integrity: sha512-MUvC/HLXVjzkQkWiExdVTEEWf0py+GfWm8WKSZsekG3ih6a21iy0BHPF07X3JIf3ifoklZXTIaHTLPBgH1C3dw==}
+    resolution: {integrity: sha512-MUvC/HLXVjzkQkWiExdVTEEWf0py+GfWm8WKSZsekG3ih6a21iy0BHPF07X3JIf3ifoklZXTIaHTLPBgH1C3dw==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-win32-x64-msvc/-/binding-win32-x64-msvc-1.1.1.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
 
   '@rolldown/binding-win32-x64-msvc@1.2.7':
-    resolution: {integrity: sha512-W/jg5qoRSqjsEv0+dZi4e687mcHqmVuU0P4fK6qS/xjetW2Gmc1W8j//z5nAeNcC8Ttm0hV46IjcYeuVwYhuiw==}
+    resolution: {integrity: sha512-W/jg5qoRSqjsEv0+dZi4e687mcHqmVuU0P4fK6qS/xjetW2Gmc1W8j//z5nAeNcC8Ttm0hV46IjcYeuVwYhuiw==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fbinding-win32-x64-msvc/-/binding-win32-x64-msvc-1.2.7.tgz}
     engines: {node: ^20.19.0 || >=22.12.0}
     cpu: [x64]
     os: [win32]
 
   '@rolldown/pluginutils@1.0.0-beta.27':
-    resolution: {integrity: sha512-+d0F4MKMCbeVUJwG96uQ4SgAznZNSq93I3V+9NHA4OpvqG8mRCpGdKmK8l/dl02h2CCDHwW2FqilnTyDcAnqjA==}
+    resolution: {integrity: sha512-+d0F4MKMCbeVUJwG96uQ4SgAznZNSq93I3V+9NHA4OpvqG8mRCpGdKmK8l/dl02h2CCDHwW2FqilnTyDcAnqjA==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fpluginutils/-/pluginutils-1.0.0-beta.27.tgz}
 
   '@rolldown/pluginutils@1.0.1':
-    resolution: {integrity: sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==}
+    resolution: {integrity: sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==, tarball: https://registry.loongnix.cn:5873/@rolldown%2fpluginutils/-/pluginutils-1.0.1.tgz}
 
   '@rollup/rollup-android-arm-eabi@4.62.2':
     resolution: {integrity: sha512-6o7ZLZK+BeenkZCFNDXqpbjw9bD6nuWonvS/lwQJp7NoVVxm6p3qE7qQ5jGuBjiFsgvqjD8mZAU5oWxTmbOeOg==}
@@ -23468,6 +23530,9 @@ packages:
   '@smithy/core@3.35.0':
     resolution: {integrity: sha512-zRMhfkByhT2snNdr1si24vJitU6Cr9ix2MikUfWmkAgp4jrNP0GcKSP5YvwQ+TlI8AZXER5QOGJn3JsVtSD9/A==}
     engines: {node: '>=18.0.0'}
+    deprecated: |-
+      Deprecated due to a bug in custom logger data redaction. Upgrade to the latest version. If you used a custom logger with this
+        version, review your logs and rotate any credentials or other secrets. See https://github.com/aws/aws-sdk-js-v3/issues/8393.
 
   '@smithy/credential-provider-imds@4.5.2':
     resolution: {integrity: sha512-A9uSdn72ozbRUSit0eib0TW7nXuNPlaeM0zcGkJ+nE6tFcSDbnmtwoxbTCFBukVQcszDAyvsd7+rTduPTXpygg==}
@@ -26259,6 +26324,14 @@ packages:
     os: [linux]
     libc: [musl]
 
+  lightningcss-linux-loong64-gnu@https://registry.loongnix.cn:5873/lightningcss-linux-loong64-gnu/-/lightningcss-linux-loong64-gnu-1.33.0.tgz:
+    resolution: {integrity: sha512-XNO8TBAGgaq1TUQFHOCyqB3szPS5ViDFshPhkisZhZhfUhjvFFObV0NjMHxZAprVw5KiGZhbI9bwPZAskRpUIw==, tarball: https://registry.loongnix.cn:5873/lightningcss-linux-loong64-gnu/-/lightningcss-linux-loong64-gnu-1.33.0.tgz}
+    version: 1.33.0
+    engines: {node: '>= 12.0.0'}
+    cpu: [loong64]
+    os: [linux]
+    libc: [glibc]
+
   lightningcss-linux-x64-gnu@1.33.0:
     resolution: {integrity: sha512-ar+Ju7LmcN0Jo4FpL4hpFybwNG9/3A/Br5KW2n2jyODg3MEZXaDYADdemoNS+BDNfMgKvylJLj4S5tyRActuAg==}
     engines: {node: '>= 12.0.0'}
@@ -26714,6 +26787,14 @@ packages:
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+
+  node-addon-require-builtin-linux-loong64-gnu@https://registry.loongnix.cn:5873/node-addon-require-builtin-linux-loong64-gnu/-/node-addon-require-builtin-linux-loong64-gnu-0.1.9.tgz:
+    resolution: {integrity: sha512-nJawbvby/NTcIxgnCsz7eLDJm5DOtfyPOoJMa+mCHaHZKHEV5Mqr/X7jdENSW7O3Dq5yLWS1FvE3a6E7RHsSEQ==, tarball: https://registry.loongnix.cn:5873/node-addon-require-builtin-linux-loong64-gnu/-/node-addon-require-builtin-linux-loong64-gnu-0.1.9.tgz}
+    version: 0.1.9
+    engines: {node: '>=20'}
+    cpu: [loong64]
+    os: [linux]
+    libc: [glibc]
 
   node-addon-require-builtin-linux-x64-gnu@0.1.9:
     resolution: {integrity: sha512-fh3K3/JvBfSYwU8vEOpp4Wdp4N/jX0EnZYq5GsaftlQin1FVqgve/yDNoh+asxBMOQyHOG8F4dXlV1WCierrfg==}
@@ -29874,6 +29955,9 @@ snapshots:
   '@img/sharp-libvips-linux-arm@1.3.4':
     optional: true
 
+  '@img/sharp-libvips-linux-loong64@1.3.4':
+    optional: true
+
   '@img/sharp-libvips-linux-ppc64@1.3.4':
     optional: true
 
@@ -29900,6 +29984,11 @@ snapshots:
   '@img/sharp-linux-arm@0.35.5':
     optionalDependencies:
       '@img/sharp-libvips-linux-arm': 1.3.4
+    optional: true
+
+  '@img/sharp-linux-loong64@0.35.5':
+    optionalDependencies:
+      '@img/sharp-libvips-linux-loong64': 1.3.4
     optional: true
 
   '@img/sharp-linux-ppc64@0.35.5':
@@ -30131,6 +30220,9 @@ snapshots:
       lexical: 0.49.0(patch_hash=54c4413db208cf234cb68c6a837f2523d3b319aa17911f1da385af08362e1356)(typescript@6.0.3)
     optionalDependencies:
       typescript: 6.0.3
+
+  '@loong64/lefthook-linux-loong64@2.1.10':
+    optional: true
 
   '@malept/cross-spawn-promise@2.0.0':
     dependencies:
@@ -30484,6 +30576,9 @@ snapshots:
   '@oxlint-tsgolint/linux-arm64@7.0.2001':
     optional: true
 
+  '@oxlint-tsgolint/linux-loong64@7.0.2001':
+    optional: true
+
   '@oxlint-tsgolint/linux-x64@7.0.2001':
     optional: true
 
@@ -30518,6 +30613,9 @@ snapshots:
     optional: true
 
   '@oxlint/binding-linux-arm64-musl@1.81.0':
+    optional: true
+
+  '@oxlint/binding-linux-loong64-gnu@1.81.0':
     optional: true
 
   '@oxlint/binding-linux-ppc64-gnu@1.81.0':
@@ -30661,6 +30759,12 @@ snapshots:
     optional: true
 
   '@rolldown/binding-linux-arm64-musl@1.2.7':
+    optional: true
+
+  '@rolldown/binding-linux-loong64-gnu@1.1.1':
+    optional: true
+
+  '@rolldown/binding-linux-loong64-gnu@1.2.7':
     optional: true
 
   '@rolldown/binding-linux-ppc64-gnu@1.1.1':
@@ -34020,6 +34124,7 @@ snapshots:
       lefthook-freebsd-arm64: 2.1.12
       lefthook-freebsd-x64: 2.1.12
       lefthook-linux-arm64: 2.1.12
+      lefthook-linux-loong64: '@loong64/lefthook-linux-loong64@2.1.10'
       lefthook-linux-x64: 2.1.12
       lefthook-openbsd-arm64: 2.1.12
       lefthook-openbsd-x64: 2.1.12
@@ -34060,6 +34165,9 @@ snapshots:
     optional: true
 
   lightningcss-linux-arm64-musl@1.33.0:
+    optional: true
+
+  lightningcss-linux-loong64-gnu@https://registry.loongnix.cn:5873/lightningcss-linux-loong64-gnu/-/lightningcss-linux-loong64-gnu-1.33.0.tgz:
     optional: true
 
   lightningcss-linux-x64-gnu@1.33.0:
@@ -34658,6 +34766,11 @@ snapshots:
       node-addon-native-custom-loader: 0.1.9
     optional: true
 
+  node-addon-require-builtin-linux-loong64-gnu@https://registry.loongnix.cn:5873/node-addon-require-builtin-linux-loong64-gnu/-/node-addon-require-builtin-linux-loong64-gnu-0.1.9.tgz:
+    dependencies:
+      node-addon-native-custom-loader: 0.1.9
+    optional: true
+
   node-addon-require-builtin-linux-x64-gnu@0.1.9:
     dependencies:
       node-addon-native-custom-loader: 0.1.9
@@ -34855,6 +34968,7 @@ snapshots:
       '@oxlint-tsgolint/darwin-arm64': 7.0.2001
       '@oxlint-tsgolint/darwin-x64': 7.0.2001
       '@oxlint-tsgolint/linux-arm64': 7.0.2001
+      '@oxlint-tsgolint/linux-loong64': 7.0.2001
       '@oxlint-tsgolint/linux-x64': 7.0.2001
       '@oxlint-tsgolint/win32-arm64': 7.0.2001
       '@oxlint-tsgolint/win32-x64': 7.0.2001
@@ -34870,6 +34984,7 @@ snapshots:
       '@oxlint/binding-linux-arm-musleabihf': 1.81.0
       '@oxlint/binding-linux-arm64-gnu': 1.81.0
       '@oxlint/binding-linux-arm64-musl': 1.81.0
+      '@oxlint/binding-linux-loong64-gnu': 1.81.0
       '@oxlint/binding-linux-ppc64-gnu': 1.81.0
       '@oxlint/binding-linux-riscv64-gnu': 1.81.0
       '@oxlint/binding-linux-riscv64-musl': 1.81.0
@@ -35311,6 +35426,7 @@ snapshots:
       '@rolldown/binding-linux-arm-gnueabihf': 1.1.1
       '@rolldown/binding-linux-arm64-gnu': 1.1.1
       '@rolldown/binding-linux-arm64-musl': 1.1.1
+      '@rolldown/binding-linux-loong64-gnu': 1.1.1
       '@rolldown/binding-linux-ppc64-gnu': 1.1.1
       '@rolldown/binding-linux-s390x-gnu': 1.1.1
       '@rolldown/binding-linux-x64-gnu': 1.1.1
@@ -35333,6 +35449,7 @@ snapshots:
       '@rolldown/binding-linux-arm-gnueabihf': 1.2.7
       '@rolldown/binding-linux-arm64-gnu': 1.2.7
       '@rolldown/binding-linux-arm64-musl': 1.2.7
+      '@rolldown/binding-linux-loong64-gnu': 1.2.7
       '@rolldown/binding-linux-ppc64-gnu': 1.2.7
       '@rolldown/binding-linux-s390x-gnu': 1.2.7
       '@rolldown/binding-linux-x64-gnu': 1.2.7
@@ -35484,7 +35601,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  sharp@0.35.5(@types/node@22.20.1):
+  sharp@0.35.5(patch_hash=28a268231fac0582154fa0d212337a3af49d61aa3bb1d28ee6d774371522c9f3)(@types/node@22.20.1):
     dependencies:
       '@img/colour': 1.1.0
       detect-libc: 2.1.2
@@ -35497,6 +35614,7 @@ snapshots:
       '@img/sharp-libvips-darwin-x64': 1.3.4
       '@img/sharp-libvips-linux-arm': 1.3.4
       '@img/sharp-libvips-linux-arm64': 1.3.4
+      '@img/sharp-libvips-linux-loong64': 1.3.4
       '@img/sharp-libvips-linux-ppc64': 1.3.4
       '@img/sharp-libvips-linux-riscv64': 1.3.4
       '@img/sharp-libvips-linux-s390x': 1.3.4
@@ -35505,6 +35623,7 @@ snapshots:
       '@img/sharp-libvips-linuxmusl-x64': 1.3.4
       '@img/sharp-linux-arm': 0.35.5
       '@img/sharp-linux-arm64': 0.35.5
+      '@img/sharp-linux-loong64': 0.35.5
       '@img/sharp-linux-ppc64': 0.35.5
       '@img/sharp-linux-riscv64': 0.35.5
       '@img/sharp-linux-s390x': 0.35.5
